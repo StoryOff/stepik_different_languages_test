@@ -10,5 +10,5 @@ def test_check_add_to_cart_button_exist(browser):
     # задержка во избежание лагов сервера
     time.sleep(2)
     add_to_cart_button = browser.find_elements(By.CSS_SELECTOR, '.btn-add-to-basket')
-    assert(len(add_to_cart_button) > 0), 'Кнопка добавления в корзину не найдена'
-    time.sleep(30)
+    assert add_to_cart_button, 'Кнопка добавления в корзину не найдена'
+    time.sleep(10)
